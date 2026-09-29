@@ -11,10 +11,10 @@ def get_message() -> str:
 
     last_day = calendar.monthrange(today.year, today.month)[1]
     end_of_month = date(today.year, today.month, last_day)
-    days_to_month_end = (end_of_month - today).days
+    days_to_month_end = ((end_of_month - today).days) + 1
 
     end_of_year = date(today.year, 12, 31)
-    days_to_year_end = (end_of_year - today).days
+    days_to_year_end = ((end_of_year - today).days) + 1
 
     day_of_year = today.timetuple().tm_yday
     total_days = 366 if calendar.isleap(today.year) else 365
